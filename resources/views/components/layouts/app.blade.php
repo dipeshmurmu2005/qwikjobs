@@ -16,6 +16,7 @@
     <x-essentials.topbar />
     <x-essentials.navbar />
     {{ $slot }}
+    <x-essentials.footer />
 </body>
 
 </html>
