@@ -9,12 +9,10 @@ export default {
         extend: {},
         colors: {
             'grey-text-color': '#5b5b5b',
-            // 'primary-color': '#007456',
             'danger-color': '#ff3377',
             'light-danger-color': '#ff337718',
             'light-primary-color': '#ECF2F0',
-            // 'light-purple-color': '#f5ecff',
-            // 'purple-color': '#795BC4',
+            'light-purple-color': '#f5ecff',
             'yellow-color': '#FFD75E',
             'light-yellow-color': '#faf6eb',
             'skin-color': '#fde7de',
