@@ -1,5 +1,5 @@
 <div class="border border-base-100 p-5 rounded-2xl bg-white">
-    <a href="#" class="h-full">
+    <a href="{{ route('jobs.view') }}" class="h-full" wire:navigate>
         <div class="flex items-center justify-between">
             <div class="flex gap-3 items-center">
                 <div class="logo h-14 w-14 rounded-full overflow-hidden">
@@ -41,7 +41,8 @@
     </a>
     <div class="mt-8 flex items-center justify-between">
         <div class="flex gap-5 items-center">
-            <span class="text-sm inline-flex items-center text-primary"><x-heroicon-s-check-badge class="h-5 w-5" /> Verified</span>
+            <span class="text-sm inline-flex items-center text-primary"><x-heroicon-s-check-badge class="h-5 w-5" />
+                Verified</span>
             <div class="text-yellow-color">
                 <i class="fa-solid fa-star-sharp"></i>
                 <i class="fa-solid fa-star-sharp"></i>
