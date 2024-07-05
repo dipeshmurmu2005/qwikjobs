@@ -1,7 +1,7 @@
 <div class="filters-section px-5 max-h-[100vh] overflow-y-auto no-scrollbar">
     <div class="sticky top-0 bg-white header py-5 border-b border-[#ededed] mb-5 flex items-center justify-between">
         <span class="text-lg font-semibold text-grey-text-color ">Filter</span>
-        <button class="btn btn-error btn-sm">Clear all</button>
+        <button class="btn btn-error btn-sm text-white">Clear all</button>
     </div>
     <form action="">
         <h1 class="font-semibold text-base text-grey-text-color mt-5">Location</h1>

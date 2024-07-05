@@ -17,6 +17,22 @@
     <x-essentials.navbar />
     {{ $slot }}
     <x-essentials.footer />
+
+    <style>
+        .filters-section::-webkit-scrollbar,
+        html::-webkit-scrollbar {
+            width: 0px;
+            /* width of the entire scrollbar */
+            height: 0px;
+            /* height of the entire scrollbar */
+        }
+
+        .filters-section,
+        html {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </body>
 
 </html>
