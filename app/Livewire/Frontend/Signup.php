@@ -10,6 +10,6 @@ class Signup extends Component
     #[Layout('components.signup.layout')]
     public function render()
     {
-        return view('components.signup.start');
+        return view('livewire.frontend.signup');
     }
 }
