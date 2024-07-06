@@ -3,64 +3,62 @@
         <div class="header">
             <h1 class="font-bold text-2xl mb-10">Create account & Post Job for free</h1>
         </div>
-        <form action="" class="mt-5 grid grid-cols-2 gap-5">
-            <div class="flex flex-col gap-2">
-                <label for=""><span class="font-semibold text-sm">Organization Name</span></label>
-                <input type="text"
-                    class="border border-greycolor outline-none h-10 rounded-sm focus:border-primary-color pl-2 text-sm font-semibold"
-                    placeholder="What is your name ?">
-            </div>
-            <div class="flex flex-col gap-2">
-                <label for=""><span class="font-semibold text-sm">Organization Email</span></label>
-                <input type="email"
-                    class="border border-greycolor outline-none h-10 rounded-sm focus:border-primary-color pl-2 text-sm font-semibold"
-                    placeholder="Tell us your Email ID">
-            </div>
-            <div class="flex flex-col gap-2 col-span-2">
-                <label for=""><span class="font-semibold text-sm">Organization type</span></label>
-                <select name="" id=""
-                    class="h-10 outline-none bg-white border border-greycolor cursor-pointer px-2">
-                    <option value="Jhapa" selected disabled>Choose Organization type</option>
-                    <option value="Jhapa">Jhapa</option>
-                </select>
-            </div>
-            <div class="flex flex-col gap-2">
-                <label for=""><span class="font-semibold text-sm">Office Number</span></label>
-                <div
-                    class="field border border-greycolor focus-within:border-primary-color flex items-center rounded-sm h-10">
-                    <button type="button" disabled class="px-3 whitespace-nowrap border-box outline-none">+977</button>
-                    <input type="number" class="outline-none rounded-sm pl-2 text-sm font-semibold w-full h-full"
-                        placeholder="What is your Mobile number ?">
-                </div>
-            </div>
-            <div class="flex flex-col gap-2">
-                <label for=""><span class="font-semibold text-sm">Headquarter</span></label>
-                <select name="" id=""
-                    class="h-10 outline-none bg-white border border-greycolor cursor-pointer px-2">
-                    <option value="Jhapa" selected disabled>Choose your district</option>
-                    <option value="Jhapa">Jhapa</option>
-                </select>
-            </div>
-            <div class="flex flex-col gap-2">
-                <label for=""><span class="font-semibold text-sm">Create Password</span></label>
-                <input type="email"
-                    class="border border-greycolor outline-none h-10 rounded-sm focus:border-primary-color pl-2 text-sm font-semibold"
-                    placeholder="Must have at least 8 characters">
-            </div>
-            <div class="flex flex-col gap-2">
-                <label for=""><span class="font-semibold text-sm">Confirm Password</span></label>
-                <input type="email"
-                    class="border border-greycolor outline-none h-10 rounded-sm focus:border-primary-color pl-2 text-sm font-semibold"
-                    placeholder="Must have at least 8 characters">
-            </div>
+        <form wire:submit="register" class="mt-5 grid grid-cols-2 gap-5">
+
+            {{-- Organization Name --}}
+            <x-form.input label="Organization Name" property="name">
+                <input type="text" class="input input-bordered" placeholder="Type Here.." wire:model="name">
+            </x-form.input>
+
+            {{-- Organization Email --}}
+            <x-form.input label="Organization Email" property="email">
+                <input type="email" class="input input-bordered" placeholder="org@gmail.com" wire:model="email">
+            </x-form.input>
+
+            {{-- Organization Type --}}
+            <x-form.select label="Choose Organization Type" property="type">
+                <option value="" selected>Choose Here</option>
+                <option value="IT">IT</option>
+                <option value="BANKING">BANKING</option>
+            </x-form.select>
+
+            {{-- Organization Number --}}
+            <x-form.input label="Number" property="number">
+                <input type="number" class="input input-bordered" placeholder="0000000000" wire:model="number">
+            </x-form.input>
+
+
+            {{-- Organization Location --}}
             <div class="col-span-2">
-                <span class="text-sm text-grey-text-color">By clicking Register, you agree to the <a href="#"
+                <x-form.select label="Choose District" property="district">
+                    <option value="">Choose Here</option>
+                    <option value="Jhapa">Jhapa</option>
+                </x-form.select>
+            </div>
+
+
+
+            {{-- Password --}}
+            <x-form.input label="Password" property="password_confirmation">
+                <input type="password" class="input input-bordered grow"
+                    placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
+                    wire:model="password_confirmation">
+            </x-form.input>
+
+            {{-- Password Confirmation --}}
+            <x-form.input label="Confirm Password" property="password">
+                <input type="password" class="input input-bordered grow"
+                    placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
+                    wire:model="password">
+            </x-form.input>
+
+            <div class="col-span-2">
+                <span class="text-sm">By clicking Register, you agree to the <a href="#"
                         class="text-purple-color">Terms and Conditions</a> & <a href="#"
-                        class="text-purple-color">Privacy Policy</a> of RojgaarNepal.com</span>
+                        class="text-purple-color">Privacy Policy</a> of Qwikjobs</span>
             </div>
             <div>
-                <button type="submit"
-                    class="bg-primary-color px-5 py-2 text-white rounded-sm font-bold">Register</button>
+                <button type="submit" class="btn btn-primary">Register</button>
             </div>
         </form>
     </div>

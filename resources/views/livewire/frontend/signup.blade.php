@@ -7,7 +7,8 @@
                     <x-heroicon-o-building-office-2 class="h-8 w-8" />
                 </div>
                 <p class="text-lg my-2 font-semibold text-secondary min-h-20">I am a client hiring for a project.</p>
-                <button class="btn btn-secondary" wire:click="client">Register</button>
+                <a href="{{ route('clients.signup') }}" wire:navigate><button
+                        class="btn btn-secondary">Register</button></a>
             </div>
             <div class="border-2 border-neutral p-5 rounded-xl">
                 <div class="icon">
