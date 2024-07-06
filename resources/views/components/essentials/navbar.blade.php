@@ -24,7 +24,8 @@
             </label>
             <div>
                 <button class="btn btn-outline btn-secondary">Log in</button>
-                <button class="btn btn-primary">Register</button>
+                <a href="{{ route('signup') }}" wire:navigate> <button class="btn btn-primary">Register</button>
+                </a>
             </div>
         </div>
     </div>
