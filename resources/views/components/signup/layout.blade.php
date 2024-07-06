@@ -13,7 +13,9 @@
 </head>
 
 <body class="font-['poppins'] bg-white">
-    {{ $slot }}
+    <div class="h-[100vh]">
+        {{ $slot }}
+    </div>
     <style>
         html::-webkit-scrollbar {
             width: 0px;
