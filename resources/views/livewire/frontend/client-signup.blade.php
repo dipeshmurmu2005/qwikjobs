@@ -17,7 +17,7 @@
 
             {{-- Organization Type --}}
             <x-form.select label="Choose Organization Type" property="type">
-                <option value="" selected disabled>Choose Here</option>
+                <option value="" selected>Choose Here</option>
                 <option value="IT">IT</option>
                 <option value="BANKING">BANKING</option>
             </x-form.select>
