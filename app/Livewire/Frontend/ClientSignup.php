@@ -2,6 +2,9 @@
 
 namespace App\Livewire\Frontend;
 
+use App\Enums\UserTypeEnum;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
@@ -11,7 +14,7 @@ class ClientSignup extends Component
 
     public $email;
 
-    public $type;
+    public $type = "";
 
     public $number;
 
@@ -42,5 +45,18 @@ class ClientSignup extends Component
     public function register()
     {
         $this->validate($this->rules());
+
+        try {
+            DB::beginTransaction();
+            User::create([
+                'name' => $this->name,
+                'email' => $this->email,
+                'password' => $this->password,
+                'type' => UserTypeEnum::CLIENT->value
+            ]);
+            DB::commit();
+        } catch (\Throwable $error) {
+            dd($error);
+        }
     }
 }
