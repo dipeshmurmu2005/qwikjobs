@@ -4,8 +4,10 @@
     </div>
     {{ $slot }}
     <div class="label">
-        @error("$property")
-            <span class="label-text-alt text-error">{{ $message }}</span>
-        @enderror
+        <span class="label-text-alt text-error h-2">
+            @error("$property")
+                {{ $message }}
+            @enderror
+        </span>
     </div>
 </label>

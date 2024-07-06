@@ -3,46 +3,53 @@
         <div class="header">
             <h1 class="font-bold text-2xl mb-10">Create account & Post Job for free</h1>
         </div>
-        <form action="" class="mt-5 grid grid-cols-2 gap-5">
+        <form wire:submit="register" class="mt-5 grid grid-cols-2 gap-5">
 
             {{-- Organization Name --}}
             <x-form.input label="Organization Name" property="name">
-                <input type="text" class="input input-bordered" placeholder="Type Here..">
+                <input type="text" class="input input-bordered" placeholder="Type Here.." wire:model="name">
             </x-form.input>
 
             {{-- Organization Email --}}
             <x-form.input label="Organization Email" property="email">
-                <input type="email" class="input input-bordered" placeholder="org@gmail.com">
+                <input type="email" class="input input-bordered" placeholder="org@gmail.com" wire:model="email">
             </x-form.input>
 
             {{-- Organization Type --}}
             <x-form.select label="Choose Organization Type" property="type">
-                <option value="Jhapa" selected disabled>Choose Here</option>
-                <option value="Jhapa">Jhapa</option>
+                <option value="" selected disabled>Choose Here</option>
+                <option value="IT">IT</option>
+                <option value="BANKING">BANKING</option>
             </x-form.select>
 
             {{-- Organization Number --}}
-            <x-form.input label="Number" property="email">
-                <input type="number" class="input input-bordered" placeholder="0000000000">
+            <x-form.input label="Number" property="number">
+                <input type="number" class="input input-bordered" placeholder="0000000000" wire:model="number">
             </x-form.input>
 
 
             {{-- Organization Location --}}
             <div class="col-span-2">
-                <x-form.select label="Choose District" property="type">
-                    <option value="Jhapa" selected disabled>Choose Here</option>
+                <x-form.select label="Choose District" property="district">
+                    <option value="">Choose Here</option>
                     <option value="Jhapa">Jhapa</option>
                 </x-form.select>
             </div>
 
+
+
             {{-- Password --}}
-            <x-form.input label="New Password" property="password">
-                <input type="password" class="input input-bordered grow" placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;">
+            <x-form.input label="Password" property="password_confirmation">
+                <input type="password" class="input input-bordered grow"
+                    placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
+                    wire:model="password_confirmation">
             </x-form.input>
 
-            {{-- New Password --}}
+            {{-- Password Confirmation --}}
             <x-form.input label="Confirm Password" property="password">
-                <input type="password" class="input input-bordered grow" placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;">
+                <input type="password" class="input input-bordered grow"
+                    placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
+                    wire:model="password">
             </x-form.input>
 
             <div class="col-span-2">
@@ -51,8 +58,7 @@
                         class="text-purple-color">Privacy Policy</a> of Qwikjobs</span>
             </div>
             <div>
-                <button type="submit"
-                    class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-primary">Register</button>
             </div>
         </form>
     </div>
